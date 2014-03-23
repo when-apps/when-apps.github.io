@@ -300,6 +300,7 @@ Full-Width Styles
 #project_icon {
   border: none;
   float: left;
+  margin-right: 10px;
   width: 90px;
   box-shadow: none;
   -webkit-box-shadow: none;
