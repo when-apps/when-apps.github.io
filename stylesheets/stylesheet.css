@@ -297,6 +297,17 @@ Full-Width Styles
   padding: 50px 10px 30px 10px;
 }
 
+#project_icon {
+  border: none;
+  float: left;
+  width: 90px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+}
+
 #project_title {
   margin: 0;
   color: #fff;
