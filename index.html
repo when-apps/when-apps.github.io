@@ -1,52 +1,37 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: When did...
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="When did : I build this website?" />
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <title>When did</title>
-  </head>
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/when-apps">View on GitHub</a>
-
-          <img id="project_icon" src="http://cl.ly/image/1q201i0t0V2b/Icon-72@2x.png">
-          <h1 id="project_title">When did</h1>
-          <h2 id="project_tagline">I build this website?</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>That is a great question! <strong>When did</strong> is a simple never ending stopwatch to help me answer questions like those. Name and start a timer and it will tell you how many years, days, hours, and minutes ago that you did that thing.</p>
-
-<p><img src="http://cl.ly/image/252A3t0M0J09/demo.gif" alt="screenshot"></p>
-
-<p>This application is <a href="https://github.com/jonmagic/product/blob/master/when_did/README.md">an exercise in product design and implementation</a>.</p>
-
-<h2>
-<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
-
-<p>If you have questions please <a href="https://github.com/when-apps/whendid-ios/issues/new">file an issue</a> or <a href="mailto:jonmagic@gmail.com">email me</a>.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-  </body>
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
