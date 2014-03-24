@@ -1,4 +1,4 @@
-when-apps.github.io
+http://what-apps.com
 ===================
 
-Customer facing website for When apps.
+Customer facing website for When Apps.

@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            When did...
+tagline:          'Home of the When Did app'
+description:      'I start building this app? That is a great question! When did helps you remember, celebrate, and sometimes mourn moments in life.'
+url:              http://when-apps.com
+
+author:
+  name:           'Jonathan Hoyt'
+  url:            https://twitter.com/jonmagic
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/when-apps/when-apps.github.io
