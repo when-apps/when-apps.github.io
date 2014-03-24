@@ -1,4 +1,4 @@
-http://what-apps.com
+http://when-apps.com
 ===================
 
 Customer facing website for When Apps.
